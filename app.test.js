@@ -1,5 +1,5 @@
 const request = require ('supertest');
-const app = require('../lib/app');
+const app = require('./app');
 
 describe('app', () => {
   it('has a testing route', () => {
@@ -36,4 +36,5 @@ describe('app', () => {
         expect(res.status).toEqual(204);
       });
   });
+  })
 });

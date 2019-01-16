@@ -1,4 +1,9 @@
-const request = require('superagent');
+
+const {
+  getCharacter,
+  getCharacters
+
+} = require('../../lib/services/rickAndMortyApi.js');
 
 describe('rick and morty service', () => {
   it('gets a character by id', () => {
@@ -8,6 +13,14 @@ describe('rick and morty service', () => {
           name: 'Rick',
           status: 'Alive',
           species: 'Human'
+        });
+      });
+  });
+
+  it('gets characters', () => {
+    return getCharacters()
+      .then(characters => {
+        expect(characters).toHaveLength(20);
       });
   });
 });

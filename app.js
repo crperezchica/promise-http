@@ -1,5 +1,5 @@
 
-const bodyParse = require('./bodyParser');
+const bodyParse = require('./lib/bodyParser');
 const { parse } = require('url');
 
 let noteId = 0;
