@@ -1,4 +1,3 @@
-
 const { getCharacter, getCharacters } = require ('../../lib/service/rickAndMortyApi.js');
 
 describe('rick and morty service', () => {
@@ -12,7 +11,6 @@ describe('rick and morty service', () => {
         });
       });
   });
-
   it('gets characters', () => {
     return getCharacters()
       .then(characters => {
