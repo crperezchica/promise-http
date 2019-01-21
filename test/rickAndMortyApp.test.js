@@ -28,7 +28,7 @@ describe('app', () => {
       .post('/character/')
       .send({ characterId: 123, note: 'My character' })
       .then(res => {
-        expect(res.status).toEqual(204);
+        expect(res.status).toEqual(200);
       });
   });
 });
